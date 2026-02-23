@@ -1,0 +1,775 @@
+/* 
+   Varaah Properties - Ultra-Luxury Editorial Theme
+   Targeting HNI (High-Net-Worth Individuals) / Global Investors
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  /* Ultra-Luxury Palette */
+  --bg-obsidian: #030303;
+  --bg-charcoal: #0a0a0a;
+  --bg-surface: #111111;
+
+  --text-pristine: #ffffff;
+  --text-silver: #a0a0a0;
+  --text-dark: #000000;
+
+  /* Refined Metallic Accents */
+  --accent-gold-light: #e6ce9e;
+  --accent-gold: #c5a059;
+  --accent-gold-dark: #8c6d33;
+
+  /* Typography Pairing */
+  --font-serif: 'Playfair Display', serif;
+  /* For editorial, sweeping headlines */
+  --font-sans: 'Montserrat', sans-serif;
+  /* For crisp, modern structure */
+
+  --transition-slow: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-fast: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --border-radius: 0px;
+  /* Sharp, architectural edges for high-end feel */
+  --container-width: 1400px;
+  /* Expansive layout */
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-obsidian);
+  color: var(--text-pristine);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent-gold);
+  color: var(--bg-obsidian);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.section {
+  padding: 10rem 0;
+  /* Dramatic spacing for editorial feel */
+  position: relative;
+}
+
+.text-gold {
+  color: var(--accent-gold);
+}
+
+.text-italic {
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* Bespoke Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: var(--transition-slow);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.btn-solid {
+  background-color: var(--accent-gold);
+  color: var(--bg-obsidian);
+}
+
+.btn-solid:hover {
+  background-color: var(--accent-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2);
+}
+
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-pristine);
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-pristine);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-outline:hover {
+  color: var(--bg-obsidian);
+  border-color: var(--text-pristine);
+}
+
+.btn-outline:hover::before {
+  transform: scaleY(1);
+}
+
+/* Haute Couture Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 2.5rem 0;
+  transition: var(--transition-slow);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  padding: 1.5rem 0;
+  background: rgba(3, 3, 3, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: var(--text-pristine);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.55rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-links a:not(.btn) {
+  font-family: var(--font-sans);
+  color: var(--text-silver);
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.nav-links a:not(.btn):hover {
+  color: var(--text-pristine);
+}
+
+/* Cinematic Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--bg-obsidian);
+  /* Fallback */
+}
+
+/* Background image handling for zoom effect */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/hero_luxury.png') center/cover no-repeat;
+  z-index: 0;
+  /* Very slow, constant zoom for cinematic feel */
+  animation: heroZoom 30s infinite alternate linear;
+}
+
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(3, 3, 3, 0.5) 0%, rgba(3, 3, 3, 0.85) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding-top: 5rem;
+}
+
+.hero-pretitle {
+  display: inline-block;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 0.85rem;
+  color: var(--primary-gold);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.hero-title {
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  margin-bottom: 2rem;
+  font-style: normal;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Line Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.scroll-indicator span {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--text-silver);
+  writing-mode: vertical-rl;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: var(--accent-gold);
+  animation: scrollLine 2s infinite ease-in-out;
+}
+
+/* Editorial Section Headers */
+.section-header {
+  margin-bottom: 5rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-pretitle {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: var(--accent-gold);
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-pristine);
+}
+
+.section-header.left-aligned {
+  text-align: left;
+  margin-left: 0;
+  max-width: 600px;
+}
+
+/* Global Portfolio (Thane, Mumbai, Dubai) */
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  /* Thin line separation */
+  background: rgba(255, 255, 255, 0.05);
+  /* Creates border effect */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.location-card {
+  position: relative;
+  height: 600px;
+  background-color: var(--bg-charcoal);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.location-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  filter: grayscale(100%);
+  transition: var(--transition-slow);
+}
+
+.location-card:hover .location-bg {
+  transform: scale(1.1);
+  opacity: 0.7;
+  filter: grayscale(0%);
+}
+
+.location-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to top, rgba(3, 3, 3, 0.9), transparent);
+  z-index: 2;
+  transition: var(--transition-slow);
+}
+
+.location-card:hover .location-content {
+  background: linear-gradient(to top, rgba(3, 3, 3, 0.8), rgba(3, 3, 3, 0.2));
+}
+
+.location-number {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: var(--accent-gold);
+}
+
+.location-info h3 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-pristine);
+  margin-bottom: 0.5rem;
+  transform: translateY(20px);
+  transition: var(--transition-slow);
+}
+
+.location-info p {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-silver);
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition-slow);
+}
+
+.location-card:hover .location-info h3 {
+  transform: translateY(0);
+}
+
+.location-card:hover .location-info p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+/* Strategic Acquisition (Services) */
+.services-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 4rem;
+}
+
+.service-item {
+  position: relative;
+  transition: var(--transition-slow);
+}
+
+.service-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -4rem;
+  width: 3px;
+  height: 0;
+  background-color: var(--accent-gold);
+  transition: var(--transition-slow);
+}
+
+.service-item:hover::before {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: #eeeeee;
+  /* Brighter for better contrast against dark backgrounds */
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+.service-item h3 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-pristine);
+  margin-bottom: 1rem;
+}
+
+.service-item p {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-silver);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* The Advisory / Contact */
+.contact-section {
+  background-color: var(--bg-surface);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.contact-detail-item h4 {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.contact-detail-item p,
+.contact-detail-item a {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--text-pristine);
+  text-decoration: none;
+  font-style: italic;
+  display: block;
+}
+
+.editorial-form {
+  padding-top: 2rem;
+}
+
+.form-group-line {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.form-group-line input,
+.form-group-line select,
+.form-group-line textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0;
+  color: var(--text-pristine);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 300;
+  transition: var(--transition-fast);
+}
+
+.form-group-line input:focus,
+.form-group-line select:focus,
+.form-group-line textarea:focus {
+  outline: none;
+  border-bottom-color: var(--accent-gold);
+}
+
+.form-group-line label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-silver);
+  transition: var(--transition-fast);
+  pointer-events: none;
+}
+
+.form-group-line input:focus~label,
+.form-group-line input:valid~label,
+.form-group-line textarea:focus~label,
+.form-group-line textarea:valid~label,
+.form-group-line select~label {
+  top: -1rem;
+  font-size: 0.65rem;
+  color: var(--accent-gold);
+}
+
+.form-group-line select option {
+  background: var(--bg-surface);
+  color: var(--text-pristine);
+}
+
+/* Footer */
+.footer {
+  padding: 8rem 0 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-mission {
+  max-width: 400px;
+}
+
+.footer-mission p {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-silver);
+  line-height: 2;
+  margin-top: 1.5rem;
+}
+
+.footer-nav h4 {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-pristine);
+  margin-bottom: 2rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+}
+
+.footer-nav ul li {
+  margin-bottom: 1rem;
+}
+
+.footer-nav ul a {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-silver);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.footer-nav ul a:hover {
+  color: var(--accent-gold);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-silver);
+  letter-spacing: 1px;
+}
+
+/* Animations Triggered by JS */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card {
+    height: 400px;
+  }
+
+  .services-layout,
+  .contact-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .service-list {
+    padding-left: 2rem;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 4rem;
+  }
+
+  .service-item::before {
+    top: -4rem;
+    left: 0;
+    width: 0;
+    height: 3px;
+  }
+
+  .service-item:hover::before {
+    width: 100%;
+    height: 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .section {
+    padding: 6rem 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
