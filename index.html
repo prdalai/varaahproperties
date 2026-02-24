@@ -10,29 +10,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <!-- Haute Couture Navigation -->
+    <!-- Premium Navigation -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                VARAAH
-                <span class="logo-tagline">Properties</span>
+            <a href="#" class="varaah-logo">
+                <svg class="varaah-icon" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="goldLightNav" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#fbe094" />
+                            <stop offset="100%" stop-color="#d4af37" />
+                        </linearGradient>
+                        <linearGradient id="goldDarkNav" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#d4af37" />
+                            <stop offset="100%" stop-color="#997a00" />
+                        </linearGradient>
+                        <linearGradient id="goldWaveNav" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#d4af37" />
+                            <stop offset="50%" stop-color="#fbe094" />
+                            <stop offset="100%" stop-color="#997a00" />
+                        </linearGradient>
+                    </defs>
+                    <g>
+                        <polygon points="45,110 45,65 60,55 60,110" fill="url(#goldLightNav)" />
+                        <polygon points="60,55 75,62 75,110 60,110" fill="url(#goldDarkNav)" />
+                        <polygon points="65,110 65,25 85,15 85,110" fill="url(#goldLightNav)" />
+                        <polygon points="85,15 105,25 105,110 85,110" fill="url(#goldDarkNav)" />
+                        <path
+                            d="M85 35 L105 45 M85 45 L105 55 M85 55 L105 65 M85 65 L105 75 M85 75 L105 85 M85 85 L105 95 M85 95 L105 105"
+                            stroke="#0a0a0f" stroke-width="2.5" />
+                        <polygon points="105,110 105,50 120,42 120,110" fill="url(#goldLightNav)" />
+                        <polygon points="120,42 135,50 135,110 120,110" fill="url(#goldDarkNav)" />
+                        <path d="M120 57 L135 65 M120 67 L135 75 M120 77 L135 85 M120 87 L135 95 M120 97 L135 105"
+                            stroke="#0a0a0f" stroke-width="2" />
+                        <path d="M 25 110 Q 70 95 115 110 T 175 110 Q 150 125 100 120 Q 60 115 25 110 Z"
+                            fill="url(#goldDarkNav)" />
+                        <path d="M 15 118 Q 70 100 125 120 T 185 125 Q 160 145 100 135 Q 50 130 15 118 Z"
+                            fill="url(#goldWaveNav)" />
+                    </g>
+                </svg>
+                <div class="varaah-text-group">
+                    <div class="varaah-text">VARAAH</div>
+                    <div class="varaah-subtext">&mdash; PROPERTIES &mdash;</div>
+                </div>
             </a>
             <nav class="nav-links">
-                <a href="#portfolio">Global Portfolio</a>
+                <a href="#portfolio">Portfolio</a>
                 <a href="#expertise">Expertise</a>
-                <a href="#consultation" class="btn btn-outline" style="padding: 0.75rem 2rem;">Complimentary
+                <a href="#consultation" class="btn btn-outline" style="padding: 0.6rem 1.8rem;">Book
                     Advisory</a>
             </nav>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span style="display:block; width:24px; height:1px; background:#fff; margin-bottom:6px;"></span>
-                <span style="display:block; width:24px; height:1px; background:#fff;"></span>
+                <span style="display:block; width:24px; height:1px; background:var(--gold); margin-bottom:6px;"></span>
+                <span style="display:block; width:24px; height:1px; background:var(--gold);"></span>
             </button>
         </div>
     </header>
@@ -42,20 +78,63 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <span class="hero-pretitle">The Pinnacle of Real Estate</span>
-            <h1 class="hero-title">Curating<br><span class="text-italic">Extraordinary</span> Spaces.</h1>
-            <p class="hero-subtitle" style="text-shadow: 0 4px 12px rgba(0,0,0,0.8); font-weight: 400; color: #f9f9f9;">
-                Bypass the friction of traditional real estate. We secure off-market luxury estates and structure direct
-                developer acquisitions—delivering zero-brokerage solutions and unprecedented value without borders.</p>
+            <div class="varaah-logo">
+                <svg class="varaah-icon" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="goldLightHero" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#fbe094" />
+                            <stop offset="100%" stop-color="#d4af37" />
+                        </linearGradient>
+                        <linearGradient id="goldDarkHero" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#d4af37" />
+                            <stop offset="100%" stop-color="#997a00" />
+                        </linearGradient>
+                        <linearGradient id="goldWaveHero" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#d4af37" />
+                            <stop offset="50%" stop-color="#fbe094" />
+                            <stop offset="100%" stop-color="#997a00" />
+                        </linearGradient>
+                        <filter id="shadowHero" x="-20%" y="-20%" width="140%" height="140%">
+                            <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.7" />
+                        </filter>
+                    </defs>
+                    <g filter="url(#shadowHero)">
+                        <polygon points="45,110 45,65 60,55 60,110" fill="url(#goldLightHero)" />
+                        <polygon points="60,55 75,62 75,110 60,110" fill="url(#goldDarkHero)" />
+                        <polygon points="65,110 65,25 85,15 85,110" fill="url(#goldLightHero)" />
+                        <polygon points="85,15 105,25 105,110 85,110" fill="url(#goldDarkHero)" />
+                        <path
+                            d="M85 35 L105 45 M85 45 L105 55 M85 55 L105 65 M85 65 L105 75 M85 75 L105 85 M85 85 L105 95 M85 95 L105 105"
+                            stroke="#0a0a0f" stroke-width="2.5" />
+                        <polygon points="105,110 105,50 120,42 120,110" fill="url(#goldLightHero)" />
+                        <polygon points="120,42 135,50 135,110 120,110" fill="url(#goldDarkHero)" />
+                        <path d="M120 57 L135 65 M120 67 L135 75 M120 77 L135 85 M120 87 L135 95 M120 97 L135 105"
+                            stroke="#0a0a0f" stroke-width="2" />
+                        <path d="M 25 110 Q 70 95 115 110 T 175 110 Q 150 125 100 120 Q 60 115 25 110 Z"
+                            fill="url(#goldDarkHero)" />
+                        <path d="M 15 118 Q 70 100 125 120 T 185 125 Q 160 145 100 135 Q 50 130 15 118 Z"
+                            fill="url(#goldWaveHero)" />
+                    </g>
+                </svg>
+                <div class="varaah-text">VARAAH</div>
+                <div class="varaah-subtext">&mdash; PROPERTIES &mdash;</div>
+            </div>
+
+            <p class="hero-subtitle">
+                Curating extraordinary spaces. We secure off-market luxury estates and structure direct
+                developer acquisitions&mdash;delivering zero-brokerage solutions and unprecedented value without
+                borders.
+            </p>
 
             <div class="hero-actions">
                 <a href="#portfolio" class="btn btn-solid">Explore Portfolio</a>
+                <a href="#consultation" class="btn btn-outline">Book Advisory</a>
             </div>
         </div>
 
         <div class="scroll-indicator">
             <div class="scroll-line"></div>
-            <span>Descend</span>
+            <span>Scroll</span>
         </div>
     </section>
 
@@ -63,54 +142,56 @@
     <section class="section" id="portfolio">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-pretitle">Unbounded Reach</span>
+                <span class="section-pretitle">Global Reach</span>
                 <h2 class="section-title">A Curated <br><span class="text-gold text-italic">Global</span> Portfolio.
                 </h2>
             </div>
         </div>
 
-        <div class="locations-grid reveal" style="transition-delay: 0.2s;">
-            <!-- Residences -->
-            <div class="location-card">
-                <div class="location-bg"
-                    style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2675&auto=format&fit=crop');">
-                </div>
-                <div class="location-content">
-                    <span class="location-number">01</span>
-                    <div class="location-info">
-                        <h3>Luxury Residences</h3>
-                        <p>Curating an exclusive selection of branded residences, ultra-luxury penthouses, and bespoke
-                            estates across the world's most dynamic epicenters of wealth.</p>
+        <div class="container">
+            <div class="locations-grid reveal" style="transition-delay: 0.2s;">
+                <!-- Residences -->
+                <div class="location-card">
+                    <div class="location-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2675&auto=format&fit=crop');">
+                    </div>
+                    <div class="location-content">
+                        <span class="location-number">01</span>
+                        <div class="location-info">
+                            <h3>Luxury Residences</h3>
+                            <p>Curating an exclusive selection of branded residences, ultra-luxury penthouses, and
+                                bespoke estates across the world's most dynamic epicenters of wealth.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Commercial -->
-            <div class="location-card">
-                <div class="location-bg"
-                    style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2670');">
-                </div>
-                <div class="location-content">
-                    <span class="location-number">02</span>
-                    <div class="location-info">
-                        <h3>Corporate Assets</h3>
-                        <p>Securing Grade-A institutional assets, high-yield commercial hubs, and strategic office
-                            headquarters designed for organizational expansion.</p>
+                <!-- Commercial -->
+                <div class="location-card">
+                    <div class="location-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2670');">
+                    </div>
+                    <div class="location-content">
+                        <span class="location-number">02</span>
+                        <div class="location-info">
+                            <h3>Corporate Assets</h3>
+                            <p>Securing Grade-A institutional assets, high-yield commercial hubs, and strategic office
+                                headquarters designed for organizational expansion.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Land -->
-            <div class="location-card">
-                <div class="location-bg"
-                    style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2670');">
-                </div>
-                <div class="location-content">
-                    <span class="location-number">03</span>
-                    <div class="location-info">
-                        <h3>Strategic Land</h3>
-                        <p>Identifying high-potential growth corridors globally for secure land banking, development
-                            syndication, and long-term wealth preservation.</p>
+                <!-- Land -->
+                <div class="location-card">
+                    <div class="location-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2670');">
+                    </div>
+                    <div class="location-content">
+                        <span class="location-number">03</span>
+                        <div class="location-info">
+                            <h3>Strategic Land</h3>
+                            <p>Identifying high-potential growth corridors globally for secure land banking, development
+                                syndication, and long-term wealth preservation.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,11 +199,15 @@
     </section>
 
     <!-- Strategic Acquisition (Services) -->
-    <section class="section" id="expertise">
+    <section class="section" id="expertise" style="background: var(--bg-surface);">
         <div class="container services-layout">
             <div class="section-header left-aligned reveal">
                 <span class="section-pretitle">The Advisory</span>
                 <h2 class="section-title">Strategic <br><span class="text-gold text-italic">Acquisitions.</span></h2>
+                <p style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.8;">
+                    We don't just find properties. We engineer acquisitions that maximize value,
+                    eliminate friction, and secure your financial legacy.
+                </p>
             </div>
 
             <div class="service-list reveal" style="transition-delay: 0.2s;">
@@ -150,24 +235,22 @@
         </div>
     </section>
 
-    <!-- The Advisory / Contact -->
+    <!-- Contact / Advisory -->
     <section class="section contact-section" id="consultation">
         <div class="container contact-grid">
             <div class="contact-info reveal">
-                <div class="section-header left-aligned" style="margin-bottom: 2rem;">
-                    <span class="section-pretitle"
-                        style="color: #10B981; letter-spacing: 4px; font-weight: 500;">Complimentary First
-                        Consultation</span>
+                <div class="section-header left-aligned" style="margin-bottom: 1.5rem;">
+                    <span class="section-pretitle">Complimentary</span>
                     <h2 class="section-title">Private <br><span class="text-gold text-italic">Advisory.</span></h2>
                 </div>
 
-                <div class="contact-details">
-                    <p
-                        style="color: var(--text-silver); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.8; margin-bottom: 1rem;">
-                        Whether you are looking to expand your corporate footprint or secure a legacy luxury residence,
-                        your first strategic consultation with our senior advisory board is entirely complimentary. Let
-                        us explore the possibilities devoid of borders.</p>
+                <p
+                    style="color: var(--text-muted); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.9; margin-bottom: 1.5rem;">
+                    Whether you are looking to expand your corporate footprint or secure a legacy luxury residence,
+                    your first strategic consultation with our senior advisory board is entirely complimentary. Let
+                    us explore the possibilities devoid of borders.</p>
 
+                <div class="contact-details">
                     <div class="contact-detail-item">
                         <h4>Global Direct Lines</h4>
                         <a href="tel:+919326813910">+91 93268 13910</a>
@@ -196,27 +279,56 @@
                     <div class="form-group-line">
                         <select id="interest" required>
                             <option value="" disabled selected></option>
-                            <option value="luxury-residential">Unbounded Luxury Residential</option>
-                            <option value="corporate-assets">Global Corporate & Commercial Leasing</option>
+                            <option value="luxury-residential">Luxury Residential</option>
+                            <option value="corporate-assets">Corporate & Commercial</option>
                             <option value="strategic-land">Strategic Land & Development</option>
                             <option value="other">General Wealth Advisory</option>
                         </select>
                         <label for="interest">Portfolio Interest</label>
                     </div>
 
-                    <button type="submit" class="btn btn-solid" style="width: 100%; border:none;">Request Complimentary
+                    <button type="submit" class="btn btn-solid"
+                        style="width: 100%; border:none; margin-top: 1rem;">Request
                         Consultation</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Editorial Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid reveal">
                 <div class="footer-mission">
-                    <a href="#" class="logo">VARAAH</a>
+                    <a href="#" class="varaah-logo">
+                        <svg class="varaah-icon" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"
+                            style="width:40px;">
+                            <defs>
+                                <linearGradient id="goldLF" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#fbe094" />
+                                    <stop offset="100%" stop-color="#d4af37" />
+                                </linearGradient>
+                                <linearGradient id="goldDF" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#d4af37" />
+                                    <stop offset="100%" stop-color="#997a00" />
+                                </linearGradient>
+                            </defs>
+                            <g>
+                                <polygon points="45,110 45,65 60,55 60,110" fill="url(#goldLF)" />
+                                <polygon points="60,55 75,62 75,110 60,110" fill="url(#goldDF)" />
+                                <polygon points="65,110 65,25 85,15 85,110" fill="url(#goldLF)" />
+                                <polygon points="85,15 105,25 105,110 85,110" fill="url(#goldDF)" />
+                                <polygon points="105,110 105,50 120,42 120,110" fill="url(#goldLF)" />
+                                <polygon points="120,42 135,50 135,110 120,110" fill="url(#goldDF)" />
+                                <path d="M 25 110 Q 70 95 115 110 T 175 110 Q 150 125 100 120 Q 60 115 25 110 Z"
+                                    fill="url(#goldDF)" />
+                            </g>
+                        </svg>
+                        <div class="varaah-text-group">
+                            <div class="varaah-text" style="font-size:1.2rem;">VARAAH</div>
+                            <div class="varaah-subtext" style="font-size:0.4rem; letter-spacing:3px;">PROPERTIES</div>
+                        </div>
+                    </a>
                     <p>Redefining luxury real estate advisory with uncompromising discretion, global reach, and
                         unparalleled cross-border market intelligence.</p>
                 </div>

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.style.cssText = `
         position: fixed;
         top: 0; left: 0; width: 100%; height: 100vh;
-        background: rgba(3,3,3,0.98);
+        background: rgba(10,10,15,0.98);
         z-index: 999;
         display: flex;
         flex-direction: column;
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.innerHTML = `
         <a href="#portfolio" style="color: #fff; font-family: 'Playfair Display', serif; font-size: 2rem; text-decoration: none;">Global Portfolio</a>
         <a href="#expertise" style="color: #fff; font-family: 'Playfair Display', serif; font-size: 2rem; text-decoration: none;">Expertise</a>
-        <a href="#consultation" style="color: #c5a059; font-family: 'Montserrat', sans-serif; font-size: 1rem; text-decoration: none; letter-spacing: 2px; text-transform: uppercase;">Complimentary Advisory</a>
+        <a href="#consultation" style="color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 1rem; text-decoration: none; letter-spacing: 2px; text-transform: uppercase;">Complimentary Advisory</a>
     `;
 
     document.body.appendChild(mobileMenu);
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
                 btn.textContent = 'ENGAGEMENT CONFIRMED';
-                btn.style.backgroundColor = '#10B981'; // Green success color
+                btn.style.backgroundColor = '#d4af37'; // Gold success color
                 btn.style.color = '#000';
                 btn.style.opacity = '1';
 
